@@ -524,6 +524,8 @@ __webpack_require__.r(__webpack_exports__);
 			}, this );
 		}
 	});
+	// Fix inheritance :\
+	Relation.extend = (backbone__WEBPACK_IMPORTED_MODULE_0___default().Model.extend);
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Relation);
 
@@ -1834,8 +1836,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-	var root = (typeof self == 'object' && self.self == self && self) ||
-		(typeof __webpack_require__.g == 'object' && __webpack_require__.g.global == __webpack_require__.g && __webpack_require__.g);
+	var root = window;
 
 	/**
 	 * Store keeps track of all created (and destruction of) RelationalModel.
@@ -2311,18 +2312,6 @@ module.exports = _;
 /******/ 		};
 /******/ 	})();
 /******/ 	
-/******/ 	/* webpack/runtime/global */
-/******/ 	(() => {
-/******/ 		__webpack_require__.g = (function() {
-/******/ 			if (typeof globalThis === 'object') return globalThis;
-/******/ 			try {
-/******/ 				return this || new Function('return this')();
-/******/ 			} catch (e) {
-/******/ 				if (typeof window === 'object') return window;
-/******/ 			}
-/******/ 		})();
-/******/ 	})();
-/******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
 /******/ 	(() => {
 /******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
@@ -2347,6 +2336,16 @@ var __webpack_exports__ = {};
   !*** ./src/index.js ***!
   \**********************/
 __webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "BlockingQueue": () => (/* reexport safe */ _BlockingQueue_js__WEBPACK_IMPORTED_MODULE_4__["default"]),
+/* harmony export */   "HasMany": () => (/* reexport safe */ _RelationHasMany_js__WEBPACK_IMPORTED_MODULE_8__["default"]),
+/* harmony export */   "HasOne": () => (/* reexport safe */ _RelationHasOne_js__WEBPACK_IMPORTED_MODULE_7__["default"]),
+/* harmony export */   "Relation": () => (/* reexport safe */ _Relation_js__WEBPACK_IMPORTED_MODULE_6__["default"]),
+/* harmony export */   "Relational": () => (/* reexport safe */ _Relational_js__WEBPACK_IMPORTED_MODULE_2__["default"]),
+/* harmony export */   "RelationalModel": () => (/* reexport safe */ _RelationalModel_js__WEBPACK_IMPORTED_MODULE_9__["default"]),
+/* harmony export */   "Semaphore": () => (/* reexport safe */ _Semaphore_js__WEBPACK_IMPORTED_MODULE_3__["default"]),
+/* harmony export */   "Store": () => (/* reexport safe */ _Store_js__WEBPACK_IMPORTED_MODULE_5__["default"])
+/* harmony export */ });
 /* harmony import */ var underscore__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! underscore */ "underscore");
 /* harmony import */ var underscore__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(underscore__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var backbone__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! backbone */ "backbone");
@@ -2440,13 +2439,13 @@ __webpack_require__.r(__webpack_exports__);
   (backbone__WEBPACK_IMPORTED_MODULE_1___default().Relational) = _Relational_js__WEBPACK_IMPORTED_MODULE_2__["default"];
 
 	(backbone__WEBPACK_IMPORTED_MODULE_1___default().Relation) = _Relation_js__WEBPACK_IMPORTED_MODULE_6__["default"];
-	// Fix inheritance :\
-	_Relation_js__WEBPACK_IMPORTED_MODULE_6__["default"].extend = (backbone__WEBPACK_IMPORTED_MODULE_1___default().Model.extend);
 
 	(backbone__WEBPACK_IMPORTED_MODULE_1___default().HasOne) = _RelationHasOne_js__WEBPACK_IMPORTED_MODULE_7__["default"];
 	(backbone__WEBPACK_IMPORTED_MODULE_1___default().HasMany) = _RelationHasMany_js__WEBPACK_IMPORTED_MODULE_8__["default"];
 
 	(backbone__WEBPACK_IMPORTED_MODULE_1___default().RelationalModel) = _RelationalModel_js__WEBPACK_IMPORTED_MODULE_9__["default"];
+
+
 
 
 })();

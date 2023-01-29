@@ -230,5 +230,7 @@ import { default as Relational } from './Relational.js';
 			}, this );
 		}
 	});
+	// Fix inheritance :\
+	Relation.extend = Backbone.Model.extend;
 
 export default Relation;

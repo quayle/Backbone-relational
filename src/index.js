@@ -78,11 +78,20 @@ import './Collection.js';
   Backbone.Relational = Relational;
 
 	Backbone.Relation = Relation;
-	// Fix inheritance :\
-	Relation.extend = Backbone.Model.extend;
 
 	Backbone.HasOne = HasOne;
 	Backbone.HasMany = HasMany;
 
 	Backbone.RelationalModel = RelationalModel;
+
+export {
+    Semaphore,
+    BlockingQueue,
+    Store,
+    Relational,
+    Relation,
+    HasOne,
+    HasMany,
+    RelationalModel
+};
 

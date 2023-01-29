@@ -8,8 +8,7 @@ import { default as RelationalModel } from './RelationalModel.js';
 import { default as Relation } from './Relation.js';
 
 
-	var root = (typeof self == 'object' && self.self == self && self) ||
-		(typeof global == 'object' && global.global == global && global);
+	var root = window;
 
 	/**
 	 * Store keeps track of all created (and destruction of) RelationalModel.
