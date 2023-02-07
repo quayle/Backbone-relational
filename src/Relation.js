@@ -87,14 +87,14 @@ import { default as Relational } from './Relational.js';
 
 			this.initialize( opts );
 
-			if ( this.options.autoFetch ) {
-				this.instance.getAsync( this.key, _.isObject( this.options.autoFetch ) ? this.options.autoFetch : {} );
-			}
-
 			// When 'relatedModel' are created or destroyed, check if it affects this relation.
 			this.listenTo( this.instance, 'destroy', this.destroy )
 				.listenTo( this.relatedCollection, 'relational:add relational:change:id', this.tryAddRelated )
 				.listenTo( this.relatedCollection, 'relational:remove', this.removeRelated );
+
+			if ( this.options.autoFetch ) {
+				this.instance.getAsync( this.key, _.isObject( this.options.autoFetch ) ? this.options.autoFetch : {} );
+			}
 		}
 	};
 	// Fix inheritance :\
