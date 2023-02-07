@@ -7,12 +7,23 @@ module.exports = [
       mode: 'development',
       devtool: false,
       output: {
+          libraryTarget: 'umd',
           filename: 'backbone-relational.js',
           path: path.resolve(__dirname, 'dist'),
       },
       externals: {
-          'underscore': '_',
-          'backbone': 'Backbone',
+          'underscore': {
+              commonjs: 'underscore',
+              commonjs2: 'underscore',
+              amd: 'underscore',
+              root:'_'
+          },
+          'backbone': {
+              commonjs: 'backbone',
+              commonjs2: 'backbone',
+              amd: 'backbone',
+              root:'Backbone'
+          },
       },
   },
   {
@@ -24,8 +35,18 @@ module.exports = [
           path: path.resolve(__dirname, 'dist'),
       },
       externals: {
-          'underscore': '_',
-          'backbone': 'Backbone',
+          'underscore': {
+              commonjs: 'underscore',
+              commonjs2: 'underscore',
+              amd: 'underscore',
+              root:'_'
+          },
+          'backbone': {
+              commonjs: 'backbone',
+              commonjs2: 'backbone',
+              amd: 'backbone',
+              root:'Backbone'
+          },
       },
   }
 ];
